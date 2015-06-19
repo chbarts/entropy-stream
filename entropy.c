@@ -45,8 +45,9 @@ void en_end(enctx * ctx)
 int en_add_byte(enctx * ctx, unsigned char c) 
 {
    if (!ctx)
-      return -1; ctx->state[c]++; 
+      return -1;
 
+   ctx->state[c]++; 
    ctx->len++; 
    return 0;
 }
